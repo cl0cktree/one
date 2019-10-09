@@ -97,10 +97,10 @@ $(function(){
 		mh2019 = $('#con-move').children('.y2019').height();
 		mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
 
-		$('#con-web').css({'height':wconheight})
-		$('#con-flash').css({'height':fconheight})
-		$('#con-img').css({'height':iconheight})
-		$('#con-move').css({'height':mconheight})
+		$('#con-web').css({'min-height':'100vh'})
+		$('#con-flash').css({'min-height':'100vh'})
+		$('#con-img').css({'min-height':'100vh'})
+		$('#con-move').css({'min-height':'100vh'})
 	};
 
 	function conhr(){
@@ -131,10 +131,10 @@ $(function(){
 				mh2019 = $('#con-move').children('.y2019').height();
 				mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
 
-				$('#con-web').css({'height':wconheight})
-				$('#con-flash').css({'height':fconheight})
-				$('#con-img').css({'height':iconheight})
-				$('#con-move').css({'height':mconheight})
+				$('#con-web').css({'min-height':'100vh'})
+				$('#con-flash').css({'min-height':'100vh'})
+				$('#con-img').css({'min-height':'100vh'})
+				$('#con-move').css({'min-height':'100vh'})
 			})
 	}
 
