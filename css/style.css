@@ -118,12 +118,12 @@ section .articleall1 .articleall-content .articleall-content-grid .content-grid-
 
 section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right{padding-top:20px;}
 section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right .box-right-btnwrap{float:right;}
-section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right button{display:inline-block;background:rgba(0,0,0,1);color:#fff;font-size:1em;font-weight:700;border:3px solid #000;transition:all 0.2s;cursor:pointer;float:right;}
+section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right button{display:block;background:rgba(0,0,0,1);color:#fff;font-size:1em;font-weight:700;border:3px solid #000;transition:all 0.2s;cursor:pointer;float:right;}
 section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right button:hover{background:rgba(255,255,255,1);color:#000;border:3px solid #000;}
 section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right button:active{background:rgba(0,0,0,0.5);color:#fff;border:3px solid #000;}
 
 section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right input{display:none;}
-section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right label{display:inline-block;box-sizing:border-box;border:3px solid #000;background:rgba(0,0,0,1);border:0;overflow:hidden;font-size:1em;font-weight:900;text-align:center;color:#fff;margin-bottom:20px;transition:all 0.2s;cursor:pointer;float:left;}
+section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right label{display:block;box-sizing:border-box;border:3px solid #000;background:rgba(0,0,0,1);border:0;overflow:hidden;font-size:1em;font-weight:900;text-align:center;color:#fff;margin-bottom:20px;transition:all 0.2s;cursor:pointer;float:left;}
 section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right label:hover{background:rgba(255,255,255,1);color:#000;border:3px solid #000;}
 section .articleall1 .articleall-content .articleall-content-grid .content-grid-box2 .grid-box-right label span{display:inline-block;text-align:center;}
 section .articleall1 .articleall-content .articleall-content-grid .content-grid-box .grid-box-con{min-height:170px;text-align:center;border:0px solid #000;background:rgba(255,255,255,0.5);margin-bottom:30px;cursor:pointer;}
