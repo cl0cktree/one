@@ -255,9 +255,9 @@ $(function(){
 			var agent = navigator.userAgent.toLowerCase();
 			if ((navigator.appName.indexOf("Explorer") != -1 )||(navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)||(agent.indexOf("safari") != -1))
 			{
-				bubble_background2();
-			}else{
 				bubble_background1();
+			}else{
+				bubble_background2();
 			}
 			stop_clock();
 		})
