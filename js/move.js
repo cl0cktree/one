@@ -251,7 +251,13 @@ $(function(){
 		$('#contents-button-inside').click(function(){
 			$('.landingpage-filter').css({'opacity':'0','z-index':'-2'})
 			$('.articleall1-content1-grid').animate({'opacity':'1'},400)
-			bubble_background();
+			var agent = navigator.userAgent.toLowerCase();
+			if ((navigator.appName.indexOf("Explorer") != -1 )||(navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)||(agent.indexOf("safari") != -1))
+			{
+				bubble_background2();
+			}else{
+				bubble_background1();
+			}
 			stop_clock();
 		})
 		grid2016();
@@ -1187,133 +1193,129 @@ $(function(){
 		}
 	})
 	//-------램덤 방울 particle------------------
-		function bubble_background(){
-			var agent = navigator.userAgent.toLowerCase();
-			if ((navigator.appName.indexOf("Explorer") != -1 )||(navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)||(agent.indexOf("safari") != -1))
+		function bubble_background1(){
+			var b_canbus=document.getElementById('articleall-content1');
+			//setInterval(function(){/*처음에 딜레이를 주고 싶으면 이것도 활성화*/
+			for (var i=1; i<5; ++i)
 			{
-				var b_canbus=document.getElementById('articleall-content1');
-				//setInterval(function(){/*처음에 딜레이를 주고 싶으면 이것도 활성화*/
-				for (var i=1; i<5; ++i)
-				{
-					(function(i){
-						setTimeout(function(){
-							setInterval(function(){/*기본적인 딜레이 조절.처음 부부과 같이 활성화시 처음 시간+기본딜레이 시간 후에 시작 됨.*/
-								var pb=Math.floor(Math.random()*60)+15;
-								var bl=Math.floor(Math.random()*92)+4;
-								var bt=Math.floor(Math.random()*5)+10;
-								var hbt=bt/2;
-								//var btm=hbt*200;
-								var bubble='<span class="bubble" id="bubble'+i+'" style="width:'+pb+'px;height:'+pb+'px;left:'+bl+'%;border:2px solid rgba(0,0,0,0.15);animation:bubble-act '+hbt+'s linear infinite;"></span>';
-								var bo=$('#bubble'+i);
-								b_canbus.insertAdjacentHTML('beforeend',bubble);
-								if (bo)
-								{
-									bo.remove(b_canbus.bo);
-								};
-							},2600);
-						},i*300);
-					})(i);
-				};
-				console.log(navigator.userAgent);
-					//},2600);
-			}else if((agent.indexOf("chrome") != -1)||(agent.indexOf("firefox") != -1)||(agent.search("Opera") != -1)){
-				const b_canbus=document.getElementById('articleall-content1');
-				const circleArray = [];
-				let loopCancel;
-				const canvas = document.createElement('canvas');
-				//const canvas_root='<canvas></canvas>';
-				const context = canvas.getContext('2d');
-				//b_canbus.insertAdjacentHTML('beforeend',canvas_root);
-				b_canbus.appendChild(canvas);
-
-				function toRadian(d) {
-				return d * Math.PI / 180;
-				}
-
-				class Circle {
-					constructor(info) {
-						this.index = info.index;
-						this.x = info.x;
-						this.y = info.y;
-						this.speed = info.speed;
-						this.radius = info.radius;
-						this.startAngle = info.startAngle;
-						this.endAngle = info.endAngle;
-						this.clockwise = info.clockwise;
-						this.draw();
-					}
-
-					draw() {
-						context.beginPath();
-						context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
-						context.fillStyle = 'rgba(255, 255, 255, 0)';
-						context.fill();
-						context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
-						context.lineWidth = '2';
-						context.stroke();
-						context.closePath();
-						context.fillStyle = '#fff';
-						//context.font = '30px bold sans-serif';
-						context.textAlign = "center";
-						//context.fillText(this.index, this.x, this.y+10);
-					}
-				}
-
-				function setLayout() {
-					canvas.width = window.innerWidth;
-					canvas.height = window.innerHeight;
-				}
-
-				function init() {
-					setLayout();
-					let x;
-					let y;
-					let speed;
-					let circle;
-
-					for (let i = 0; i < 5; i++) {
-						x = (Math.random() * window.innerWidth * 0.6)+(Math.random() * window.innerWidth * 0.4);
-						y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
-						//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
-						speed = Math.random()*3 + 2;
-						circle = new Circle({
-							index: i,
-							x: x,
-							y: y,
-							speed: speed,
-							radius : Math.floor(Math.random()*30)+10,
-							startAngle : 360,
-							endAngle : 350,
-							clockwise : false
-						});
-						circleArray.push(circle);
-					}
-
-					render();
-				}
-
-
-				function render() {
-					context.clearRect(0, 0, canvas.width, canvas.height);
-					let circle;
-					for (let i = 0; i < circleArray.length; i++) {
-						circle = circleArray[i];
-						circle.y -= circle.speed;
-						if (circle.y < -circle.radius) {
-							circle.y = canvas.height;
-							circle.x = (Math.random() * window.innerWidth * 0.6)+(Math.random() * window.innerWidth * 0.4);
-							circle.radius = Math.floor(Math.random()*60)+15;
-						}
-						circle.draw();
-					}
-					loopCancel=requestAnimationFrame(render);
-				}
-				init();
-
-				window.addEventListener('resize', setLayout);
-				console.log(navigator.userAgent);
+				(function(i){
+					setTimeout(function(){
+						setInterval(function(){/*기본적인 딜레이 조절.처음 부부과 같이 활성화시 처음 시간+기본딜레이 시간 후에 시작 됨.*/
+							var pb=Math.floor(Math.random()*60)+15;
+							var bl=Math.floor(Math.random()*92)+4;
+							var bt=Math.floor(Math.random()*5)+10;
+							var hbt=bt/2;
+							//var btm=hbt*200;
+							var bubble='<span class="bubble" id="bubble'+i+'" style="width:'+pb+'px;height:'+pb+'px;left:'+bl+'%;border:2px solid rgba(0,0,0,0.15);animation:bubble-act '+hbt+'s linear infinite;"></span>';
+							var bo=$('#bubble'+i);
+							b_canbus.insertAdjacentHTML('beforeend',bubble);
+							if (bo)
+							{
+								bo.remove(b_canbus.bo);
+							};
+						},2600);
+					},i*300);
+				})(i);
 			}
+			console.log(navigator.userAgent);
+			//},2600);
 		};
+		function bubble_background2(){
+			const b_canbus=document.getElementById('articleall-content1');
+			const circleArray = [];
+			let loopCancel;
+			const canvas = document.createElement('canvas');
+			//const canvas_root='<canvas></canvas>';
+			const context = canvas.getContext('2d');
+			//b_canbus.insertAdjacentHTML('beforeend',canvas_root);
+			b_canbus.appendChild(canvas);
+
+			function toRadian(d) {
+			return d * Math.PI / 180;
+			}
+
+			class Circle {
+				constructor(info) {
+					this.index = info.index;
+					this.x = info.x;
+					this.y = info.y;
+					this.speed = info.speed;
+					this.radius = info.radius;
+					this.startAngle = info.startAngle;
+					this.endAngle = info.endAngle;
+					this.clockwise = info.clockwise;
+					this.draw();
+				}
+
+				draw() {
+					context.beginPath();
+					context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+					context.fillStyle = 'rgba(255, 255, 255, 0)';
+					context.fill();
+					context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+					context.lineWidth = '2';
+					context.stroke();
+					context.closePath();
+					context.fillStyle = '#fff';
+					//context.font = '30px bold sans-serif';
+					context.textAlign = "center";
+					//context.fillText(this.index, this.x, this.y+10);
+				}
+			}
+
+			function setLayout() {
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+			}
+
+			function init() {
+				setLayout();
+				let x;
+				let y;
+				let speed;
+				let circle;
+
+				for (let i = 0; i < 5; i++) {
+					x = (Math.random() * window.innerWidth * 0.6)+(Math.random() * window.innerWidth * 0.4);
+					y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
+					//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
+					speed = Math.random()*3 + 2;
+					circle = new Circle({
+						index: i,
+						x: x,
+						y: y,
+						speed: speed,
+						radius : Math.floor(Math.random()*30)+10,
+						startAngle : 360,
+						endAngle : 350,
+						clockwise : false
+					});
+					circleArray.push(circle);
+				}
+
+				render();
+			}
+
+
+			function render() {
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				let circle;
+				for (let i = 0; i < circleArray.length; i++) {
+					circle = circleArray[i];
+					circle.y -= circle.speed;
+					if (circle.y < -circle.radius) {
+						circle.y = canvas.height;
+						circle.x = (Math.random() * window.innerWidth * 0.6)+(Math.random() * window.innerWidth * 0.4);
+						circle.radius = Math.floor(Math.random()*60)+15;
+					}
+					circle.draw();
+				}
+				loopCancel=requestAnimationFrame(render);
+			}
+			init();
+			window.addEventListener('resize', setLayout);
+			console.log(navigator.userAgent);
+		}
 	//------------------------------------------
 	return false;
 });
