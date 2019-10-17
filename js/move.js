@@ -97,10 +97,10 @@ $(function(){
 		mh2019 = $('#con-move').children('.y2019').height();
 		mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
 
-		$('#con-web').css({'min-height':'100vh'})
-		$('#con-flash').css({'min-height':'100vh'})
-		$('#con-img').css({'min-height':'100vh'})
-		$('#con-move').css({'min-height':'100vh'})
+		$('#con-web').css({'height':window.innerHeight})
+		$('#con-flash').css({'height':window.innerHeight})
+		$('#con-img').css({'height':window.innerHeight})
+		$('#con-move').css({'height':window.innerHeight})
 	};
 
 	function conhr(){
@@ -131,10 +131,10 @@ $(function(){
 				mh2019 = $('#con-move').children('.y2019').height();
 				mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
 
-				$('#con-web').css({'min-height':'100vh'})
-				$('#con-flash').css({'min-height':'100vh'})
-				$('#con-img').css({'min-height':'100vh'})
-				$('#con-move').css({'min-height':'100vh'})
+				$('#con-web').css({'height':window.innerHeight})
+				$('#con-flash').css({'height':window.innerHeight})
+				$('#con-img').css({'height':window.innerHeight})
+				$('#con-move').css({'height':window.innerHeight})
 			})
 	}
 
@@ -1183,6 +1183,7 @@ $(function(){
 			$('.grid-box-right label ').children('span').html('Stop')
 			start_s();
 			timein();
+			grid2016();
 		}
 	})
 	//-------램덤 방울 particle------------------
@@ -1306,7 +1307,7 @@ $(function(){
 							x: x,
 							y: y,
 							speed: speed,
-							radius : Math.floor(Math.random()*60)+15,
+							radius : Math.floor(Math.random()*30)+10,
 							startAngle : 360,
 							endAngle : 350,
 							clockwise : false
