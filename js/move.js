@@ -253,9 +253,14 @@ $(function(){
 			$('.articleall1-content1-grid').animate({'opacity':'1'},400)
 
 			var agent = navigator.userAgent.toLowerCase();
-			if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') > -1) || (agent.indexOf("msie") > -1) || (agent.indexOf("safari") >-1))
+			if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) || (agent.search( "edge/")>-1) || (agent.indexOf("safari") >-1))
 			{
-				bubble_background1();
+				if ((agent.indexOf("safari") >-1)||(navigator.userAgent.search( "trident" )>-1)||(navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1))
+				{
+					bubble_background1();
+				}else{
+					bubble_background2();
+				}
 			}else{
 				bubble_background2();
 			}
