@@ -1189,60 +1189,34 @@ $(function(){
 	//-------램덤 방울 particle------------------
 		function bubble_background(){
 			var agent = navigator.userAgent.toLowerCase();
-			if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) || (agent.search( "edge/")>-1))
+			if ((navigator.appName.indexOf("Explorer") != -1 )||(navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)||(agent.indexOf("safari") != -1))
 			{
-				if ((navigator.userAgent.search( "edge/")>-1)||(navigator.userAgent.search( "trident" )>-1)||(navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1))
-  				{
-					var b_canbus=document.getElementById('articleall-content1');
-					//setInterval(function(){/*처음에 딜레이를 주고 싶으면 이것도 활성화*/
-					for (var i=1; i<5; ++i)
-					{
-						(function(i){
-							setTimeout(function(){
-								setInterval(function(){/*기본적인 딜레이 조절.처음 부부과 같이 활성화시 처음 시간+기본딜레이 시간 후에 시작 됨.*/
-									var pb=Math.floor(Math.random()*60)+15;
-									var bl=Math.floor(Math.random()*92)+4;
-									var bt=Math.floor(Math.random()*5)+10;
-									var hbt=bt/2;
-									//var btm=hbt*200;
-									var bubble='<span class="bubble" id="bubble'+i+'" style="width:'+pb+'px;height:'+pb+'px;left:'+bl+'%;border:2px solid rgba(0,0,0,0.15);animation:bubble-act '+hbt+'s linear infinite;"></span>';
-									var bo=$('#bubble'+i);
-									b_canbus.insertAdjacentHTML('beforeend',bubble);
-									if (bo)
-									{
-										bo.remove(b_canbus.bo);
-									};
-								},2600);
-							},i*300);
-						})(i);
-					};
+				var b_canbus=document.getElementById('articleall-content1');
+				//setInterval(function(){/*처음에 딜레이를 주고 싶으면 이것도 활성화*/
+				for (var i=1; i<5; ++i)
+				{
+					(function(i){
+						setTimeout(function(){
+							setInterval(function(){/*기본적인 딜레이 조절.처음 부부과 같이 활성화시 처음 시간+기본딜레이 시간 후에 시작 됨.*/
+								var pb=Math.floor(Math.random()*60)+15;
+								var bl=Math.floor(Math.random()*92)+4;
+								var bt=Math.floor(Math.random()*5)+10;
+								var hbt=bt/2;
+								//var btm=hbt*200;
+								var bubble='<span class="bubble" id="bubble'+i+'" style="width:'+pb+'px;height:'+pb+'px;left:'+bl+'%;border:2px solid rgba(0,0,0,0.15);animation:bubble-act '+hbt+'s linear infinite;"></span>';
+								var bo=$('#bubble'+i);
+								b_canbus.insertAdjacentHTML('beforeend',bubble);
+								if (bo)
+								{
+									bo.remove(b_canbus.bo);
+								};
+							},2600);
+						},i*300);
+					})(i);
+				};
+				console.log(navigator.userAgent);
 					//},2600);
-				}else{
-					var b_canbus=document.getElementById('articleall-content1');
-					//setInterval(function(){/*처음에 딜레이를 주고 싶으면 이것도 활성화*/
-					for (var i=1; i<5; ++i)
-					{
-						(function(i){
-							setTimeout(function(){
-								setInterval(function(){/*기본적인 딜레이 조절.처음 부부과 같이 활성화시 처음 시간+기본딜레이 시간 후에 시작 됨.*/
-									var pb=Math.floor(Math.random()*60)+15;
-									var bl=Math.floor(Math.random()*92)+4;
-									var bt=Math.floor(Math.random()*5)+10;
-									var hbt=bt/2;
-									//var btm=hbt*200;
-									var bubble='<span class="bubble" id="bubble'+i+'" style="width:'+pb+'px;height:'+pb+'px;left:'+bl+'%;border:2px solid rgba(0,0,0,0.15);animation:bubble-act '+hbt+'s linear infinite;"></span>';
-									var bo=$('#bubble'+i);
-									b_canbus.insertAdjacentHTML('beforeend',bubble);
-									if (bo)
-									{
-										bo.remove(b_canbus.bo);
-									};
-								},2600);
-							},i*300);
-						})(i);
-					};
-				}
-			}else{
+			}else if((agent.indexOf("chrome") != -1)||(agent.indexOf("firefox") != -1)||(agent.search("Opera"))){
 				const b_canbus=document.getElementById('articleall-content1');
 				const circleArray = [];
 				let loopCancel;
@@ -1337,6 +1311,7 @@ $(function(){
 				init();
 
 				window.addEventListener('resize', setLayout);
+				console.log(navigator.userAgent);
 			}
 		};
 	//------------------------------------------
