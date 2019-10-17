@@ -1278,9 +1278,9 @@ $(function(){
 						context.stroke();
 						context.closePath();
 						context.fillStyle = '#fff';
-						context.font = '30px bold sans-serif';
+						//context.font = '30px bold sans-serif';
 						context.textAlign = "center";
-						context.fillText(this.index, this.x, this.y+10);
+						//context.fillText(this.index, this.x, this.y+10);
 					}
 				}
 
@@ -1300,7 +1300,7 @@ $(function(){
 						x = (Math.random() * window.innerWidth * 0.6)+(Math.random() * window.innerWidth * 0.4);
 						y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 						//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
-						speed = Math.random()*8 + 2;
+						speed = Math.random()*3 + 2;
 						circle = new Circle({
 							index: i,
 							x: x,
@@ -1309,7 +1309,7 @@ $(function(){
 							radius : Math.floor(Math.random()*60)+15,
 							startAngle : 360,
 							endAngle : 350,
-									clockwise : false
+							clockwise : false
 						});
 						circleArray.push(circle);
 					}
