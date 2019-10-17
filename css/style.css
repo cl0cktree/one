@@ -19,6 +19,7 @@ header{padding:0;margin:0;border:0;display:block;position:relative;overflow:hidd
 footer{padding:0;margin:0;border:0;display:block;position:relative;overflow:hidden;}
 address{font-style:normal;margin:0 auto;text-align:center;}
 a{font-family:'Nanum Gothic','NanumGothic','Gothic','고딕';}
+canvas{position:absolute;top:80px;left:0;width:100%;z-index:0;}
 
 input[type=radio]{display:none;}
 input[type=radio]+label{display:inline-block;cursor:pointer;position:relative;padding-left:14px;margin-right:15px;}
