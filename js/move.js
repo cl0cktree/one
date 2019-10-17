@@ -1216,7 +1216,7 @@ $(function(){
 				};
 				console.log(navigator.userAgent);
 					//},2600);
-			}else if((agent.indexOf("chrome") != -1)||(agent.indexOf("firefox") != -1)||(agent.search("Opera"))){
+			}else if((agent.indexOf("chrome") != -1)||(agent.indexOf("firefox") != -1)||(agent.search("Opera") != -1)){
 				const b_canbus=document.getElementById('articleall-content1');
 				const circleArray = [];
 				let loopCancel;
