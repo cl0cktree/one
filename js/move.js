@@ -259,10 +259,10 @@ $(function(){
 				{
 					bubble_background1();
 				}else{
-					bubble_background2();
+					bubble_background1();
 				}
 			}else{
-				bubble_background2();
+				bubble_background1();
 			}
 			stop_clock();
 		})
