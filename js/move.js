@@ -253,7 +253,7 @@ $(function(){
 			$('.articleall1-content1-grid').animate({'opacity':'1'},400)
 
 			var agent = navigator.userAgent.toLowerCase();
-			if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)||(agent.indexOf("safari") != -1))
+			if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') > -1) || (agent.indexOf("msie") > -1) || (agent.indexOf("safari") >-1))
 			{
 				bubble_background1();
 			}else{
