@@ -1198,7 +1198,7 @@ $(function(){
 			grid2016();
 		}
 	})
-	//-------램덤 방울 particle------------------
+//-------램덤 방울 particle------------------
 		function bubble_background1(){
 			var b_canbus=document.getElementById('articleall-content1');
 			//setInterval(function(){/*처음에 딜레이를 주고 싶으면 이것도 활성화*/
@@ -1225,7 +1225,8 @@ $(function(){
 			}
 			//},2600);
 		};
-		// function bubble_background2(){//es6버전 original version
+		//===es6버전 original version=====================
+		// function bubble_background2(){
 		// 	const b_canbus=document.getElementById('articleall-content1');
 		// 	const circleArray = [];
 		// 	let loopCancel;
@@ -1318,6 +1319,7 @@ $(function(){
 		// 	init();
 		// 	window.addEventListener('resize', setLayout);
 		// }
+		//==========================================================================
 
 		function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return !!right[Symbol.hasInstance](left); } else { return left instanceof right; } }
 		function _classCallCheck(instance, Constructor) { if (!_instanceof(instance, Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
