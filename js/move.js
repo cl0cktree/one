@@ -104,38 +104,38 @@ $(function(){
 	};
 
 	function conhr(){
-			$(window).resize(function(){
-				msheight = $('.slide img').height();
+		$(window).resize(function(){
+			msheight = $('.slide img').height();
 
-				wh2016 = $('#con-web').children('.y2016').height();
-				wh2017 = $('#con-web').children('.y2017').height();
-				wh2018 = $('#con-web').children('.y2018').height();
-				wh2019 = $('#con-web').children('.y2019').height();
-				wconheight = Math.max(wh2016,wh2017,wh2018,wh2019);
+			wh2016 = $('#con-web').children('.y2016').height();
+			wh2017 = $('#con-web').children('.y2017').height();
+			wh2018 = $('#con-web').children('.y2018').height();
+			wh2019 = $('#con-web').children('.y2019').height();
+			wconheight = Math.max(wh2016,wh2017,wh2018,wh2019);
 
-				fh2016 = $('#con-flash').children('.y2016').height();
-				fh2017 = $('#con-flash').children('.y2017').height();
-				fh2018 = $('#con-flash').children('.y2018').height();
-				fh2019 = $('#con-flash').children('.y2019').height();
-				fconheight = Math.max(fh2016,fh2017,fh2018,fh2019);
+			fh2016 = $('#con-flash').children('.y2016').height();
+			fh2017 = $('#con-flash').children('.y2017').height();
+			fh2018 = $('#con-flash').children('.y2018').height();
+			fh2019 = $('#con-flash').children('.y2019').height();
+			fconheight = Math.max(fh2016,fh2017,fh2018,fh2019);
 
-				ih2016 = $('#con-img').children('.y2016').height();
-				ih2017 = $('#con-img').children('.y2017').height();
-				ih2018 = $('#con-img').children('.y2018').height();
-				ih2019 = $('#con-img').children('.y2019').height();
-				iconheight = Math.max(ih2016,ih2017,ih2018,ih2019);
+			ih2016 = $('#con-img').children('.y2016').height();
+			ih2017 = $('#con-img').children('.y2017').height();
+			ih2018 = $('#con-img').children('.y2018').height();
+			ih2019 = $('#con-img').children('.y2019').height();
+			iconheight = Math.max(ih2016,ih2017,ih2018,ih2019);
 
-				mh2016 = $('#con-move').children('.y2016').height();
-				mh2017 = $('#con-move').children('.y2017').height();
-				mh2018 = $('#con-move').children('.y2018').height();
-				mh2019 = $('#con-move').children('.y2019').height();
-				mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
+			mh2016 = $('#con-move').children('.y2016').height();
+			mh2017 = $('#con-move').children('.y2017').height();
+			mh2018 = $('#con-move').children('.y2018').height();
+			mh2019 = $('#con-move').children('.y2019').height();
+			mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
 
-				$('#con-web').css({'height':window.innerHeight})
-				$('#con-flash').css({'height':window.innerHeight})
-				$('#con-img').css({'height':window.innerHeight})
-				$('#con-move').css({'height':window.innerHeight})
-			})
+			$('#con-web').css({'height':window.innerHeight})
+			$('#con-flash').css({'height':window.innerHeight})
+			$('#con-img').css({'height':window.innerHeight})
+			$('#con-move').css({'height':window.innerHeight})
+		})
 	}
 
 	function cona(){
@@ -1224,7 +1224,6 @@ $(function(){
 					},i*300);
 				})(i);
 			}
-			console.log(navigator.userAgent);
 			//},2600);
 		};
 		// function bubble_background2(){//es6버전 original version
@@ -1319,7 +1318,6 @@ $(function(){
 		// 	}
 		// 	init();
 		// 	window.addEventListener('resize', setLayout);
-		// 	console.log(navigator.userAgent);
 		// }
 
 
@@ -1437,7 +1435,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     init();
     window.addEventListener('resize', setLayout);
-    console.log(navigator.userAgent);
     }
 	//------------------------------------------
 	return false;
