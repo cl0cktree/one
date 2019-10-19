@@ -1419,7 +1419,7 @@ $(function(){
 
 				if (circle.y < -circle.radius) {
 					circle.y = canvas.height;
-					circle.x = Math.random() * window.innerWidth * 0.6 + Math.random() * window.innerWidth * 0.4;
+					circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 					circle.radius = Math.floor(Math.random() * 60) + 15;
 				}
 
