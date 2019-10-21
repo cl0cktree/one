@@ -73,38 +73,54 @@ $(function(){
 	};
 
 	function conh(){
+		var height_cal=0;
+
+		msheight = $('.slide img').height();
+
 		wh2016 = $('#con-web').children('.y2016').height();
 		wh2017 = $('#con-web').children('.y2017').height();
 		wh2018 = $('#con-web').children('.y2018').height();
 		wh2019 = $('#con-web').children('.y2019').height();
 		wconheight = Math.max(wh2016,wh2017,wh2018,wh2019);
+		a_wconheight = wh2016+wh2017+wh2018+wh2019;
 
 		fh2016 = $('#con-flash').children('.y2016').height();
 		fh2017 = $('#con-flash').children('.y2017').height();
 		fh2018 = $('#con-flash').children('.y2018').height();
 		fh2019 = $('#con-flash').children('.y2019').height();
 		fconheight = Math.max(fh2016,fh2017,fh2018,fh2019);
+		a_fconheight = fh2016+fh2017+fh2018+fh2019;
 
 		ih2016 = $('#con-img').children('.y2016').height();
 		ih2017 = $('#con-img').children('.y2017').height();
 		ih2018 = $('#con-img').children('.y2018').height();
 		ih2019 = $('#con-img').children('.y2019').height();
 		iconheight = Math.max(ih2016,ih2017,ih2018,ih2019);
+		a_iconheight = ih2016+ih2017+ih2018+ih2019;
 
 		mh2016 = $('#con-move').children('.y2016').height();
 		mh2017 = $('#con-move').children('.y2017').height();
 		mh2018 = $('#con-move').children('.y2018').height();
 		mh2019 = $('#con-move').children('.y2019').height();
 		mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
+		a_mconheight = mh2016+mh2017+mh2018+mh2019;
 
-		$('#con-web').css({'height':window.innerHeight})
-		$('#con-flash').css({'height':window.innerHeight})
-		$('#con-img').css({'height':window.innerHeight})
-		$('#con-move').css({'height':window.innerHeight})
+		if(wconheight>window.innerHeight||fconheight>window.innerHeight||iconheight>window.innerHeight||mconheight>window.innerHeight){
+			height_cal=this.height;
+		}else{
+			height_cal=window.innerHeight;
+		}
+
+		// $('#con-web').css({'height':height_cal})
+		// $('#con-flash').css({'height':height_cal})
+		// $('#con-img').css({'height':height_cal})
+		// $('#con-move').css({'height':height_cal})
 	};
 
 	function conhr(){
 		$(window).resize(function(){
+			var height_cal=0;
+
 			msheight = $('.slide img').height();
 
 			wh2016 = $('#con-web').children('.y2016').height();
@@ -112,29 +128,38 @@ $(function(){
 			wh2018 = $('#con-web').children('.y2018').height();
 			wh2019 = $('#con-web').children('.y2019').height();
 			wconheight = Math.max(wh2016,wh2017,wh2018,wh2019);
+			a_wconheight = wh2016+wh2017+wh2018+wh2019;
 
 			fh2016 = $('#con-flash').children('.y2016').height();
 			fh2017 = $('#con-flash').children('.y2017').height();
 			fh2018 = $('#con-flash').children('.y2018').height();
 			fh2019 = $('#con-flash').children('.y2019').height();
 			fconheight = Math.max(fh2016,fh2017,fh2018,fh2019);
+			a_fconheight = fh2016+fh2017+fh2018+fh2019;
 
 			ih2016 = $('#con-img').children('.y2016').height();
 			ih2017 = $('#con-img').children('.y2017').height();
 			ih2018 = $('#con-img').children('.y2018').height();
 			ih2019 = $('#con-img').children('.y2019').height();
 			iconheight = Math.max(ih2016,ih2017,ih2018,ih2019);
+			a_iconheight = ih2016+ih2017+ih2018+ih2019;
 
 			mh2016 = $('#con-move').children('.y2016').height();
 			mh2017 = $('#con-move').children('.y2017').height();
 			mh2018 = $('#con-move').children('.y2018').height();
 			mh2019 = $('#con-move').children('.y2019').height();
 			mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
+			a_mconheight = mh2016+mh2017+mh2018+mh2019;
 
-			$('#con-web').css({'height':window.innerHeight})
-			$('#con-flash').css({'height':window.innerHeight})
-			$('#con-img').css({'height':window.innerHeight})
-			$('#con-move').css({'height':window.innerHeight})
+			if(wconheight>window.innerHeight||fconheight>window.innerHeight||iconheight>window.innerHeight||mconheight>window.innerHeight){
+				height_cal=this.height;
+			}else{
+				height_cal=window.innerHeight;
+			}
+			// $('#con-web').css({'height':height_cal})
+			// $('#con-flash').css({'height':height_cal})
+			// $('#con-img').css({'height':height_cal})
+			// $('#con-move').css({'height':height_cal})
 		})
 	}
 
@@ -179,7 +204,7 @@ $(function(){
 	};
 
 	function grid2017(){
-		conh();
+		//conh();
 		$('.y2016, .y2018, .y2019').stop().fadeOut(300)
 		$('.y2017').stop().fadeIn(300)
 		$(window).resize(function(){
@@ -206,7 +231,7 @@ $(function(){
 	};
 
 	function gridAll(){
-		cona();
+		//cona();
 		$('.y2016, .y2017, .y2018, .y2019').stop().fadeIn(300)
 		//$('.no2016, .no2017, .no2018').fadeOut(150)
 		$('#box-right-btnwrap input[type=checkbox]').prop('checked',true)
