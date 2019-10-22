@@ -73,7 +73,7 @@ $(function(){
 	};
 
 	function conh(){
-		var height_cal=0;
+		//var height_cal=0;
 
 		msheight = $('.slide img').height();
 
@@ -105,11 +105,11 @@ $(function(){
 		mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
 		a_mconheight = mh2016+mh2017+mh2018+mh2019;
 
-		if(wconheight>window.innerHeight||fconheight>window.innerHeight||iconheight>window.innerHeight||mconheight>window.innerHeight){
-			height_cal=this.height;
-		}else{
-			height_cal=window.innerHeight;
-		}
+		// if(wconheight>window.innerHeight||fconheight>window.innerHeight||iconheight>window.innerHeight||mconheight>window.innerHeight){
+		// 	height_cal=this.height;
+		// }else{
+		// 	height_cal=window.innerHeight;
+		// }
 
 		// $('#con-web').css({'height':height_cal})
 		// $('#con-flash').css({'height':height_cal})
@@ -119,7 +119,7 @@ $(function(){
 
 	function conhr(){
 		$(window).resize(function(){
-			var height_cal=0;
+			//var height_cal=0;
 
 			msheight = $('.slide img').height();
 
@@ -151,11 +151,11 @@ $(function(){
 			mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
 			a_mconheight = mh2016+mh2017+mh2018+mh2019;
 
-			if(wconheight>window.innerHeight||fconheight>window.innerHeight||iconheight>window.innerHeight||mconheight>window.innerHeight){
-				height_cal=this.height;
-			}else{
-				height_cal=window.innerHeight;
-			}
+			// if(wconheight>window.innerHeight||fconheight>window.innerHeight||iconheight>window.innerHeight||mconheight>window.innerHeight){
+			// 	height_cal=this.height;
+			// }else{
+			// 	height_cal=window.innerHeight;
+			// }
 			// $('#con-web').css({'height':height_cal})
 			// $('#con-flash').css({'height':height_cal})
 			// $('#con-img').css({'height':height_cal})
@@ -195,11 +195,11 @@ $(function(){
 	};
 
 	function grid2016(){
-		conh();
+		//conh();
 		$('.y2017, .y2018, .y2019').stop().fadeOut(300)
 		$('.y2016').stop().fadeIn(300)
 		$(window).resize(function(){
-			conhr();
+			//conhr();
 		})
 	};
 
@@ -208,25 +208,25 @@ $(function(){
 		$('.y2016, .y2018, .y2019').stop().fadeOut(300)
 		$('.y2017').stop().fadeIn(300)
 		$(window).resize(function(){
-			conhr();
+			//conhr();
 		})
 	};
 
 	function grid2018(){
-		conh();
+		//conh();
 		$('.y2016, .y2017, .y2019').stop().fadeOut(300)
 		$('.y2018').stop().fadeIn(300)
 		$(window).resize(function(){
-			conhr();
+			//conhr();
 		})
 	};
 
 	function grid2019(){
-		conh();
+		//conh();
 		$('.y2016, .y2017, .y2018').stop().fadeOut(300)
 		$('.y2019').stop().fadeIn(300)
 		$(window).resize(function(){
-			conhr();
+			//conhr();
 		})
 	};
 
