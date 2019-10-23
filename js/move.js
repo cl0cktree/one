@@ -198,36 +198,36 @@ $(function(){
 		//conh();
 		$('.y2017, .y2018, .y2019').stop().fadeOut(300)
 		$('.y2016').stop().fadeIn(300)
-		$(window).resize(function(){
+		//$(window).resize(function(){
 			//conhr();
-		})
+		//})
 	};
 
 	function grid2017(){
 		//conh();
 		$('.y2016, .y2018, .y2019').stop().fadeOut(300)
 		$('.y2017').stop().fadeIn(300)
-		$(window).resize(function(){
+		//$(window).resize(function(){
 			//conhr();
-		})
+		//})
 	};
 
 	function grid2018(){
 		//conh();
 		$('.y2016, .y2017, .y2019').stop().fadeOut(300)
 		$('.y2018').stop().fadeIn(300)
-		$(window).resize(function(){
+		//$(window).resize(function(){
 			//conhr();
-		})
+		//})
 	};
 
 	function grid2019(){
 		//conh();
 		$('.y2016, .y2017, .y2018').stop().fadeOut(300)
 		$('.y2019').stop().fadeIn(300)
-		$(window).resize(function(){
+		//$(window).resize(function(){
 			//conhr();
-		})
+		//})
 	};
 
 	function gridAll(){
