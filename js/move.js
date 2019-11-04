@@ -257,6 +257,7 @@ $(function(){
 				$('.countbar1, .countbar2').stop().animate({'width':countid*ai+'%'},autospeed-autospeed*0.4925)
 				as--;
 			}
+			//console.log('in = as : '+as+ ' / ai : '+ ai +' / countid : '+countid+' / count : '+count+' / width :'+countid*ai);
 		},1000)
 	}
 
