@@ -3,6 +3,8 @@ $(function(){
 	var autospeed=6000;
 	var as=autospeed/1000-1;
 	var countid=100/as;
+	var start_v;
+	var stop_v;
 
 	function clock(){
 		setTimeout(function(){
@@ -1798,7 +1800,8 @@ $(function(){
 				});
 			};
 		};
-		return_slide();
+		return_slide = return_slide();
+		return_slide;
 //-----------------------------------------------------------------
 //-------램덤 방울 particle------------------
 		function bubble_background1(){
