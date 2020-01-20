@@ -1789,7 +1789,10 @@ $(function(){
 							$('.grid-box-right label ').children('span').html('Stop')
 							start_s();
 							timein();
-							grid2016();
+							if($('.y2016').css('display')=='block'&&$('.y2017').css('display')=='block'&&$('.y2018').css('display')=='block'&&$('.y2019').css('display')=='block'){
+								//grid2016();
+								$('#bulet1').stop().click();
+							}
 						}
 					});
 				});
