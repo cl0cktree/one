@@ -712,6 +712,21 @@ $(function(){
 			}else if (this==document.getElementById('wgrid-box-con23'))
 			{
 				datasum = 'data/data.html #filter-conbox-contents24';
+			}else if (this==document.getElementById('wgrid-box-con24'))
+			{
+				datasum = 'data/data.html #filter-conbox-contents25';
+			}else if (this==document.getElementById('wgrid-box-con25'))
+			{
+				datasum = 'data/data.html #filter-conbox-contents26';
+			}else if (this==document.getElementById('wgrid-box-con26'))
+			{
+				datasum = 'data/data.html #filter-conbox-contents27';
+			}else if (this==document.getElementById('wgrid-box-con27'))
+			{
+				datasum = 'data/data.html #filter-conbox-contents28';
+			}else if (this==document.getElementById('wgrid-box-con28'))
+			{
+				datasum = 'data/data.html #filter-conbox-contents29';
 			}
 
 			else if (this==document.getElementById('fgrid-box-con1'))
