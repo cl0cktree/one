@@ -86,29 +86,33 @@ $(function(){
 		wh2017 = $('#con-web').children('.y2017').height();
 		wh2018 = $('#con-web').children('.y2018').height();
 		wh2019 = $('#con-web').children('.y2019').height();
-		wconheight = Math.max(wh2016,wh2017,wh2018,wh2019);
-		a_wconheight = wh2016+wh2017+wh2018+wh2019;
+		wh2020 = $('#con-web').children('.y2020').height();
+		wconheight = Math.max(wh2016,wh2017,wh2018,wh2019,wh2020);
+		a_wconheight = wh2016+wh2017+wh2018+wh2019+wh2020;
 
 		fh2016 = $('#con-flash').children('.y2016').height();
 		fh2017 = $('#con-flash').children('.y2017').height();
 		fh2018 = $('#con-flash').children('.y2018').height();
 		fh2019 = $('#con-flash').children('.y2019').height();
-		fconheight = Math.max(fh2016,fh2017,fh2018,fh2019);
-		a_fconheight = fh2016+fh2017+fh2018+fh2019;
+		fh2020 = $('#con-flash').children('.y2020').height();
+		fconheight = Math.max(fh2016,fh2017,fh2018,fh2019,fh2020);
+		a_fconheight = fh2016+fh2017+fh2018+fh2019,fh2020;
 
 		ih2016 = $('#con-img').children('.y2016').height();
 		ih2017 = $('#con-img').children('.y2017').height();
 		ih2018 = $('#con-img').children('.y2018').height();
 		ih2019 = $('#con-img').children('.y2019').height();
-		iconheight = Math.max(ih2016,ih2017,ih2018,ih2019);
-		a_iconheight = ih2016+ih2017+ih2018+ih2019;
+		ih2020 = $('#con-img').children('.y2020').height();
+		iconheight = Math.max(ih2016,ih2017,ih2018,ih2019,ih2020);
+		a_iconheight = ih2016+ih2017+ih2018+ih2019,ih2020;
 
 		mh2016 = $('#con-move').children('.y2016').height();
 		mh2017 = $('#con-move').children('.y2017').height();
 		mh2018 = $('#con-move').children('.y2018').height();
 		mh2019 = $('#con-move').children('.y2019').height();
-		mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
-		a_mconheight = mh2016+mh2017+mh2018+mh2019;
+		mh2020 = $('#con-move').children('.y2020').height();
+		mconheight = Math.max(mh2016,mh2017,mh2018,mh2019,mh2020);
+		a_mconheight = mh2016+mh2017+mh2018+mh2019,mh2020;
 
 		// if(wconheight>window.innerHeight||fconheight>window.innerHeight||iconheight>window.innerHeight||mconheight>window.innerHeight){
 		// 	height_cal=this.height;
@@ -132,29 +136,33 @@ $(function(){
 			wh2017 = $('#con-web').children('.y2017').height();
 			wh2018 = $('#con-web').children('.y2018').height();
 			wh2019 = $('#con-web').children('.y2019').height();
-			wconheight = Math.max(wh2016,wh2017,wh2018,wh2019);
-			a_wconheight = wh2016+wh2017+wh2018+wh2019;
-
+			wh2020 = $('#con-web').children('.y2020').height();
+			wconheight = Math.max(wh2016,wh2017,wh2018,wh2019,wh2020);
+			a_wconheight = wh2016+wh2017+wh2018+wh2019+wh2020;
+			
 			fh2016 = $('#con-flash').children('.y2016').height();
 			fh2017 = $('#con-flash').children('.y2017').height();
 			fh2018 = $('#con-flash').children('.y2018').height();
 			fh2019 = $('#con-flash').children('.y2019').height();
-			fconheight = Math.max(fh2016,fh2017,fh2018,fh2019);
-			a_fconheight = fh2016+fh2017+fh2018+fh2019;
-
+			fh2020 = $('#con-flash').children('.y2020').height();
+			fconheight = Math.max(fh2016,fh2017,fh2018,fh2019,fh2020);
+			a_fconheight = fh2016+fh2017+fh2018+fh2019,fh2020;
+			
 			ih2016 = $('#con-img').children('.y2016').height();
 			ih2017 = $('#con-img').children('.y2017').height();
 			ih2018 = $('#con-img').children('.y2018').height();
 			ih2019 = $('#con-img').children('.y2019').height();
-			iconheight = Math.max(ih2016,ih2017,ih2018,ih2019);
-			a_iconheight = ih2016+ih2017+ih2018+ih2019;
-
+			ih2020 = $('#con-img').children('.y2020').height();
+			iconheight = Math.max(ih2016,ih2017,ih2018,ih2019,ih2020);
+			a_iconheight = ih2016+ih2017+ih2018+ih2019,ih2020;
+			
 			mh2016 = $('#con-move').children('.y2016').height();
 			mh2017 = $('#con-move').children('.y2017').height();
 			mh2018 = $('#con-move').children('.y2018').height();
 			mh2019 = $('#con-move').children('.y2019').height();
-			mconheight = Math.max(mh2016,mh2017,mh2018,mh2019);
-			a_mconheight = mh2016+mh2017+mh2018+mh2019;
+			mh2020 = $('#con-move').children('.y2020').height();
+			mconheight = Math.max(mh2016,mh2017,mh2018,mh2019,mh2020);
+			a_mconheight = mh2016+mh2017+mh2018+mh2019,mh2020;
 
 			// if(wconheight>window.innerHeight||fconheight>window.innerHeight||iconheight>window.innerHeight||mconheight>window.innerHeight){
 			// 	height_cal=this.height;
@@ -173,25 +181,33 @@ $(function(){
 		wh2017 = $('#con-web').children('.y2017').height();
 		wh2018 = $('#con-web').children('.y2018').height();
 		wh2019 = $('#con-web').children('.y2019').height();
-		wconheight = wh2016+wh2017+wh2018+wh2019;
+		wh2020 = $('#con-web').children('.y2020').height();
+		wconheight = Math.max(wh2016,wh2017,wh2018,wh2019,wh2020);
+		a_wconheight = wh2016+wh2017+wh2018+wh2019+wh2020;
 
 		fh2016 = $('#con-flash').children('.y2016').height();
 		fh2017 = $('#con-flash').children('.y2017').height();
 		fh2018 = $('#con-flash').children('.y2018').height();
 		fh2019 = $('#con-flash').children('.y2019').height();
-		fconheight = fh2016+fh2017+fh2018+fh2019;
+		fh2020 = $('#con-flash').children('.y2020').height();
+		fconheight = Math.max(fh2016,fh2017,fh2018,fh2019,fh2020);
+		a_fconheight = fh2016+fh2017+fh2018+fh2019,fh2020;
 
 		ih2016 = $('#con-img').children('.y2016').height();
 		ih2017 = $('#con-img').children('.y2017').height();
 		ih2018 = $('#con-img').children('.y2018').height();
 		ih2019 = $('#con-img').children('.y2019').height();
-		iconheight = ih2016+ih2017+ih2018+ih2019;
+		ih2020 = $('#con-img').children('.y2020').height();
+		iconheight = Math.max(ih2016,ih2017,ih2018,ih2019,ih2020);
+		a_iconheight = ih2016+ih2017+ih2018+ih2019,ih2020;
 
 		mh2016 = $('#con-move').children('.y2016').height();
 		mh2017 = $('#con-move').children('.y2017').height();
 		mh2018 = $('#con-move').children('.y2018').height();
 		mh2019 = $('#con-move').children('.y2019').height();
-		mconheight = mh2016+mh2017+mh2018+mh2019;
+		mh2020 = $('#con-move').children('.y2020').height();
+		mconheight = Math.max(mh2016,mh2017,mh2018,mh2019,mh2020);
+		a_mconheight = mh2016+mh2017+mh2018+mh2019,mh2020;
 
 		$('#con-web').css({'height':wconheight})
 		$('#con-flash').css({'height':fconheight})
@@ -201,7 +217,7 @@ $(function(){
 
 	function grid2016(){
 		//conh();
-		$('.y2017, .y2018, .y2019').stop().fadeOut(300)
+		$('.y2017, .y2018, .y2019, .y2020').stop().fadeOut(300)
 		$('.y2016').stop().fadeIn(300)
 		//$(window).resize(function(){
 			//conhr();
@@ -210,7 +226,7 @@ $(function(){
 
 	function grid2017(){
 		//conh();
-		$('.y2016, .y2018, .y2019').stop().fadeOut(300)
+		$('.y2016, .y2018, .y2019, .y2020').stop().fadeOut(300)
 		$('.y2017').stop().fadeIn(300)
 		//$(window).resize(function(){
 			//conhr();
@@ -219,7 +235,7 @@ $(function(){
 
 	function grid2018(){
 		//conh();
-		$('.y2016, .y2017, .y2019').stop().fadeOut(300)
+		$('.y2016, .y2017, .y2019, .y2020').stop().fadeOut(300)
 		$('.y2018').stop().fadeIn(300)
 		//$(window).resize(function(){
 			//conhr();
@@ -228,8 +244,17 @@ $(function(){
 
 	function grid2019(){
 		//conh();
-		$('.y2016, .y2017, .y2018').stop().fadeOut(300)
+		$('.y2016, .y2017, .y2018, .y2020').stop().fadeOut(300)
 		$('.y2019').stop().fadeIn(300)
+		//$(window).resize(function(){
+			//conhr();
+		//})
+	};
+
+	function grid2020(){
+		//conh();
+		$('.y2016, .y2017, .y2018, .y2019').stop().fadeOut(300)
+		$('.y2020').stop().fadeIn(300)
 		//$(window).resize(function(){
 			//conhr();
 		//})
@@ -237,7 +262,7 @@ $(function(){
 
 	function gridAll(){
 		//cona();
-		$('.y2016, .y2017, .y2018, .y2019').stop().fadeIn(300)
+		$('.y2016, .y2017, .y2018, .y2019, .y2020').stop().fadeIn(300)
 		//$('.no2016, .no2017, .no2018').fadeOut(150)
 		// $('#box-right-btnwrap input[type=checkbox]').prop('checked',true)
 		// $('.grid-box-right label ').children('span').html('Play')
@@ -1295,7 +1320,7 @@ $(function(){
 							if(sort_index==mswidth){
 								$('#prev-btn').css({'z-index':'4','opacity':'1'});
 								$('#next-btn').css({'z-index':'-5','opacity':'0'});
-								grid2019();
+								grid2020();
 							}else if(sort_index==1){
 								$('#prev-btn').css({'z-index':'-5','opacity':'0'});
 								$('#next-btn').css({'z-index':'4','opacity':'1'});
@@ -1307,6 +1332,8 @@ $(function(){
 									grid2017();
 								}else if(sort_index==3){
 									grid2018();
+								}else if(sort_index==4){
+									grid2019();
 								};
 							}
 						}else{
@@ -1315,7 +1342,7 @@ $(function(){
 							if(sort_index==mswidth){
 								$('#prev-btn').css({'z-index':'4','opacity':'1'});
 								$('#next-btn').css({'z-index':'-5','opacity':'0'});
-								grid2019();
+								grid2020();
 							}else if(sort_index==1){
 								$('#prev-btn').css({'z-index':'-5','opacity':'0'});
 								$('#next-btn').css({'z-index':'4','opacity':'1'});
@@ -1327,6 +1354,8 @@ $(function(){
 									grid2017();
 								}else if(sort_index==3){
 									grid2018();
+								}else if(sort_index==4){
+									grid2019();
 								};
 							}
 							$('.slide-container').stop().animate({'left':move+'%'},100);
@@ -1344,7 +1373,7 @@ $(function(){
 							if(sort_index==mswidth){
 								$('#prev-btn').css({'z-index':'4','opacity':'1'});
 								$('#next-btn').css({'z-index':'-5','opacity':'0'});
-								grid2019();
+								grid2020();
 							}else if(sort_index==1){
 								$('#prev-btn').css({'z-index':'-5','opacity':'0'});
 								$('#next-btn').css({'z-index':'4','opacity':'1'});
@@ -1356,6 +1385,8 @@ $(function(){
 									grid2017();
 								}else if(sort_index==3){
 									grid2018();
+								}else if(sort_index==4){
+									grid2019();
 								};
 							}
 							$('.slide-container').stop().animate({'left':move+'%'},100);
@@ -1367,7 +1398,7 @@ $(function(){
 							if(sort_index==mswidth){
 								$('#prev-btn').css({'z-index':'4','opacity':'1'});
 								$('#next-btn').css({'z-index':'-5','opacity':'0'});
-								grid2019();
+								grid2020();
 							}else if(sort_index==1){
 								$('#prev-btn').css({'z-index':'-5','opacity':'0'});
 								$('#next-btn').css({'z-index':'4','opacity':'1'});
@@ -1379,6 +1410,8 @@ $(function(){
 									grid2017();
 								}else if(sort_index==3){
 									grid2018();
+								}else if(sort_index==4){
+									grid2019();
 								};
 							}
 							$('.slide-container').stop().animate({'left':move+'%'},100);
@@ -1683,9 +1716,15 @@ $(function(){
 						}
 						else if (event.type=='mouseleave')
 						{
-							start_s();
-							// startbar();
-							timein();
+							if($('#box-right-btnwrap input[type=checkbox]').prop('checked')==true){
+								stop_s();
+								// stop_bar();
+								timeout();
+							}else{
+								start_s();
+								// startbar();
+								timein();
+							}
 						}
 						return false;
 					});
@@ -1701,7 +1740,7 @@ $(function(){
 								if(sort_index==mswidth){
 									$('#prev-btn').css({'z-index':'4','opacity':'1'});
 									$('#next-btn').css({'z-index':'-5','opacity':'0'});
-									grid2019();
+									grid2020();
 								}else if(sort_index==1){
 									$('#prev-btn').css({'z-index':'-5','opacity':'0'});
 									$('#next-btn').css({'z-index':'4','opacity':'1'});
@@ -1713,6 +1752,8 @@ $(function(){
 										grid2017();
 									}else if(sort_index==3){
 										grid2018();
+									}else if(sort_index==4){
+										grid2019();
 									};
 								}
 								$('.bulet').css({'color':'#ccc'});
@@ -1797,9 +1838,11 @@ $(function(){
 							timeout();
 						}else{
 							$('.grid-box-right label ').children('span').html('Stop')
+							stop_s();
+							timeout();
 							start_s();
 							timein();
-							if($('.y2016').css('display')=='block'&&$('.y2017').css('display')=='block'&&$('.y2018').css('display')=='block'&&$('.y2019').css('display')=='block'){
+							if($('.y2016').css('display')=='block'&&$('.y2017').css('display')=='block'&&$('.y2018').css('display')=='block'&&$('.y2019').css('display')=='block'&&$('.y2020').css('display')=='block'){
 								//grid2016();
 								$('#bulet1').stop().click();
 							}
